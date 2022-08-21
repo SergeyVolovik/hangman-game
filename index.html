@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <svg class="figure" width="200" height="250">
+
+            <!-- rod -->
+            <line x1="60" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="50" />
+            <line x1="60" y1="20" x2="60" y2="230" />
+            <line x1="20" y1="230" x2="100" y2="230" />
+
+            <!-- head -->
+            <circle class="figure__part" cx="140" cy="70" r="20"/>
+
+            <!-- body -->
+            <line class="figure__part" x1="140" y1="90" x2="140" y2="150" />
+            <!-- arms -->
+            <line class="figure__part" x1="140" y1="120" x2="120" y2="100" />
+            <line class="figure__part" x1="140" y1="120" x2="160" y2="100" />
+            <!-- legs -->
+            <line class="figure__part" x1="140" y1="150" x2="120" y2="180" />
+            <line class="figure__part" x1="140" y1="150" x2="160" y2="180" />
+            
+        </svg>
+
+        <div class="wrong-letters__container">
+            <div id="wrong__letters" class="wrong__letters"></div>
+        </div>
+
+        <div id="word" class="word"></div>
+    </div>
+    <div id="popup__container" class="popup__container">
+        <div class="popup">
+            <h2 id="final__message"></h2>
+            <button id="play__btn">Play Again</button>
+        </div>
+    </div>
+    <div id="notification__container" class="notification__container">
+        <p>You have already entered this letter</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
